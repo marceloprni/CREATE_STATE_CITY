@@ -1,0 +1,38 @@
+
+### VISUALIZAR TODOS OS USER
+GET http://localhost:3333/user
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImVtYWlsIjoibWFyY2VwcGVyaUBnbWFpbC5jb20uYnIiLCJ0eXBlVXNlciI6MiwiaWF0IjoxNzM0MDkwNzE5LCJleHAiOjE3MzQxNzcxMTksInN1YiI6IjkifQ.dhLkoKzXgl4fVbGdKziuR1KBiuaHiIUIsNmn-ASyFEg
+
+### CREATE USER
+POST http://localhost:3333/user 
+content-type: application/json
+Authorization: token
+
+{
+    "name": "lari souza", 
+    "email": "laris@gmail.com.br", 
+    "cpf" : "39518754546",
+    "phone": "11897813021",
+    "password": "lari123",
+    "typeUser": 2
+}
+
+### LOGIN USER
+POST http://localhost:3333/auth 
+content-type: application/json
+
+{
+    "email": "marcepperi@gmail.com.br", 
+    "password": "senhaAdmin543"
+
+}
+
+### EDTI PASSWORD
+PATCH http://localhost:3333/user
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImVtYWlsIjoibWFyY2VwcGVyaUBnbWFpbC5jb20uYnIiLCJ0eXBlVXNlciI6MiwiaWF0IjoxNzM0NjA4OTQwLCJleHAiOjE3MzQ2OTUzNDAsInN1YiI6IjkifQ.1tgj26NqUKChcpwO5Sma1ToxngJbuoxtAw0zj8iRZ1k
+
+{   
+    "password": "senhaAdmin543"
+}

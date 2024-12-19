@@ -1,0 +1,37 @@
+npm install eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node --save-dev
+npm install --save-dev pre-commit
+
+npm i express
+npm i --save-dev @types/express
+
+npm install @prisma/client prisma pg
+npx prisma generate
+npx prisma migrate dev
+
+npm install --save typescript
+
+npm install --save-dev ts-node-dev
+
+
+npx tsc --init - cria o arquivo tscondig
+
+https://github.com/juliossena/curso_node/blob/main/src/modules/user/user.controller.ts
+
+.eslintrc.js
+{
+  "plugins": ["prettier"],
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],  // Aplica as regras apenas a arquivos .js
+      "excludedFiles": ["**/*.test.ts"]  // Exclui arquivos de teste
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020, // Ou uma versão apropriada para seu projeto
+    "sourceType": "module" // Adicione ou altere para "module"
+  }
+}
